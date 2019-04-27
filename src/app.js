@@ -5,6 +5,9 @@ const forecast = require('./utils/forecast');
 
 console.log(path.join(__dirname, '../public'));
 
+const port = process.env.PORT || 3000;
+
+
 const app = express();
 const publicDirPath = path.join(__dirname, '../public');
 app.set('view engine', 'hbs');
@@ -58,8 +61,8 @@ app.get('*', (req, res) => {
     res.send('i hlqb')
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 })
 
 app.get('/products', (req, res) => {
