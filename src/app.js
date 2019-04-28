@@ -23,7 +23,7 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    res.send('<h1>I am a title</h1>')
+    res.send('<h1>I am the boss of the toilet</h1>')
 })
 
 app.get('/weather', (req, res) => {
